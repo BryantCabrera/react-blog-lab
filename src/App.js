@@ -13,6 +13,11 @@ class App extends Component {
 
   handleClick = () => {
     console.log(' handled click');
+    this.edit();
+  }
+
+  edit = () => {
+    this.setState({body: prompt('Enter New Body')});
   }
 
   render() {
