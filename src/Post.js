@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import Comment from './Comment.js'
 
 class Post extends Component {
     render () {
         return (
-            <h1>This is Post</h1>
-        )
+            <div>
+                <h1>{this.props.title}</h1>
+                <p>By {this.props.author}</p>
+                <div>
+                    <p>{this.props.body}</p>
+                </div>
+                <h3>Comments:</h3>
+                <Comment body={this.props.comments[0]} />
+            </div>
+        );
     }
 }
 
