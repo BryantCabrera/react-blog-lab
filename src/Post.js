@@ -11,7 +11,9 @@ class Post extends Component {
                     <p>{this.props.body}</p>
                 </div>
                 <h3>Comments:</h3>
-                <Comment body={this.props.comments[0]} />
+                <ul>
+                    {this.props.comments.map ((comment, index) => <li><Comment body={comment} /></li>)}
+                </ul>   
             </div>
         );
     }
